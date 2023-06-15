@@ -12,12 +12,22 @@ myButton.addEventListener ('click',
 
 
         const prezzo = KM.value * 0.15;
-        console.log (prezzo, typeof prezzo);
+        
     
         // Se il tipo di veicolo è un camion, il prezzo si triplica
-        if (tipoVeicolo == camion) {
+        if (tipoVeicolo == 'camion') {
             let prezzoFinale = prezzo * 3;
-            console.log (prezzoFinale);
+            console.log ('Il prezzo si triplica costa: €' + " " + prezzoFinale);
+        }
+
+        else if (tipoVeicolo == 'furgone') {
+            prezzoFinale = prezzo * 2;
+            console.log ('Il prezzo si raddoppia costa: €' + " " + prezzoFinale)
+        }
+
+        else if (tipoVeicolo == 'auto') {
+            prezzoFinale = prezzo;
+            console.log ('Il prezzo non varia: €' + " " + prezzoFinale)
         }
     
     
